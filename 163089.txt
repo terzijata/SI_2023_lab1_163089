@@ -1,0 +1,195 @@
+Барања:
+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
+
+1. Инсталирајте Git и креирајте Ваш профил на Github:
+
+  - Git можеме да инсталираме од следниов линк:
+  https://git-scm.com/downloads
+  
+2. На https://github.com/settings/repositories променете го името на Вашата главна
+гранка во master:
+
+ - https://github.com/terzijata
+ 
+ - Името на главната гранка може да се промени во Settings->Repositories и со промена на Repository default branch името.
+ 
+3. Креирајте Ваш оддалечен (remote) репозиториум на Github што ќе биде
+именуван во форматот SI_2023_lab1_INDEX:
+
+ - https://github.com/terzijata/SI_2023_lab1_163089
+  
+4.  На вашиот компјутер, направете директориум (локален репозиториум) којшто ќе
+биде со исто име како и вашиот оддалечен репозиториум. Влезете во
+директориумот и иницијализирајте го Git во директориумот.
+
+ - На било која локација правиме нов фолдер, со името "SI_2023_lab1_163089". Потоа влегуваме во фолдерот и отвараме нов терминал или командна линија и ја пишуваме командата "git init" за иницијализација на контролниот систем.
+ 
+ 5. Поврзете го локалниот репозиториум со оддалечениот репозиториум:
+ 
+  - git remote add origin https://github.com/terzijata/SI_2023_lab1_163089.git
+  
+6. Додадете README.md датотека во која ќе се потпишете (име, презиме, број на
+индекс). Направете commit со порака Initial commit.
+
+  - Креираме нов фајл со име README и екстензија .md.
+  - Со командата 'git status', можеме да видиме еден документ кој е 'untracked':
+  
+  On branch master
+
+  No commits yet
+
+  Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+		README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+  -----------------------------------------------------------------------
+  - Во терминал ја користиме командата "git add README.md", по кој новиот фајл станува 'tracked' и е истовремено 'staged'.
+  
+  
+ On branch master
+
+ No commits yet
+
+ Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+ ----------------------------------------------------------------------
+  - Во терминал ја користиме командата 'git commit -m "Initial commit" '
+  
+  
+  [master (root-commit) daca183] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+  ---------------------------------------------------------------------
+ 
+7. Додадете фајл SILab1.java и ископирајте ја содржината на класата од тука .
+Направете commit со порака Add java class.
+
+
+ - git add SILab1.java	
+ - git commit -m "Add java class"
+ 
+8. Синхронизирајте ги сите гранки со оддалечениот репозиториум:
+
+ - Гранките можеме да ги синхронизираме со командата 'git push -u origin master'
+ - По оваа команда, ќе ни побара да внесеме username и password, покрај корисничко име, за пасворд користиме ТОКЕН кој се генерира во Settings->Developers Settings->Personal access tokens.
+ 
+Username for 'https://github.com': teodor@protonmail.ch
+Password for 'https://teodor@protonmail.ch@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 831 bytes | 415.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/terzijata/SI_2023_lab1_163089.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+-------------------------------------------------------------------------
+
+9. Отворете три гранки (сите да се разгрануваат од master гранката): bug1, bug2 и
+bug3.
+
+ - Со командата 'git branch', можеме да ги видиме моменталните гранки:
+ 
+git branch
+* master
+----------
+
+ - Со командата 'git branch ime', каде 'ime' е името на новата гранка правиме три нови:
+ 
+ git branch bug1
+ git branch bug2
+ git branch bug3
+ 
+ 
+ $ git branch
+  bug1
+  bug2
+  bug3
+* master
+
+ 
+ 
+ 10. Префрлете се на гранката bug1:
+  
+  - Со командата 'git checkout bug1' се префрламе на таа гранка 'bug1':
+  
+Switched to branch 'bug1'
+
+ 11. Поправете ја грешката во for циклусот кој се користи за читање на N-те броеви
+од стандарден влез. Направете commit со пораката Fix wrong loop for reading.
+
+git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   SILab1.java
+git add SILab1.java
+
+
+git commit -m "Fix wrong loop for reading"
+
+12. Префрлете се на гранката bug2.
+
+  - Со командата 'git checkout bug2' се префрламе на таа гранка 'bug2':
+  
+Switched to branch 'bug2'
+
+13. Поправете ја грешката во методот filterOddNumbers. Направете commit со
+пораката Fix wrong condition in filterOddNumbers.
+
+it status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   SILab1.java
+git add SILab1.java
+
+
+git commit -m "Fix wrong condition in filterOddNumbers"
+
+14. Префрлете се на гранката bug3.
+15. Поправете ја грешката во методот sumEvenNumbers. Направете commit со
+порака Fix method sumEvenNumbers.
+16. Синхронизирајте ги сите гранки со оддалечениот репозиториум.
+ - git push -u origin bug3
+
+17. Префрлете се на гранката master. - git checkout master
+18. Спојте ја гранката bug1 кон гранката master. - git merge bug1
+19. Синхронизирајте ги сите гранки со оддалечениот репозиториум. -git push
+20. Спојте ја гранката bug2 кон гранката master.
+21. Синхронизирајте ги сите гранки со оддалечениот репозиториум.
+22. Префрлете се на гранката bug3.
+23. Направете rebase спрема гранката master.
+224. Префрлете се на гранката master.
+25. Спојте ја гранката bug3 кон гранката master.
+26. Синхронизирајте ги сите гранки со оддалечениот репозиториум. (Доколку е
+потребно, употребете --force за гранката bug3).
+27. Додадете датотеката logs.txt во која ќе ги ископирате досегашните git логови.
+Додадете ја и датотеката INDEX.txt (каде што наместо INDEX ќе стои вашиот
+број на индекс) во која водевте документација додека ја решававте оваа
+лабораториска вежба. Направете последен commit со порака Final commit.
+28. Синхронизирајте ги сите гранки со оддалечениот репозиториум.
+_________________________________________________________________________
+29. Направете fork од репозиториумот https://github.com/stefanandonov/SI2023 .
+30. Fork-ot што се креираше на вашиот github профил, клонирајте го на вашиот
+компјутер.
+31. Влезете во локалниот репозиториум и додадете датотека INDEX.txt (аде што
+наместо INDEX ќе стои вашиот број на индекс). Во датотеката напишете го
+вашето име. Направете commit со порака Add file.
+32. Синхронизирајте ја master гранката на оддалечениот репозиториум.
+33. Отворете го fork репозиторумот што е креиран на вашиот github профил, и
+кликнете на Contribute -> Create pull request (како што е прикажано на сликата
+подолу).
+34. Креирајте pull request во чие име ќе биде напишан само бројот на вашиот
+индекс (ништо друго). Скриптата за автоматско оценување нема да ви го
+открие PR-от доколку во него имате било што друго освен бројот на
+индексот.
+ 
+ 
+ 

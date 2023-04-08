@@ -1,0 +1,88 @@
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   SILab1.java
+
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git merge bug2
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git push
+Username for 'https://github.com': terzijata
+Password for 'https://terzijata@github.com': 
+Everything up-to-date
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   SILab1.java
+
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git branch
+  bug1
+  bug2
+  bug3
+* master
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git merge bug1
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   SILab1.java
+
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git commit
+[master f1fd74c] Merge branch 'bug2'
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git merge bug1
+Already up to date.
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git merge bug2
+Already up to date.
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git merge bug3
+Auto-merging SILab1.java
+Merge made by the 'recursive' strategy.
+ SILab1.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git merge bug3
+Already up to date.
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git push
+Username for 'https://github.com': terzijata
+Password for 'https://terzijata@github.com': 
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 688 bytes | 688.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/terzijata/SI_2023_lab1_163089.git
+   ef7052c..263d02f  master -> master
+terzijata@terzijataAir:~/Desktop/SI_2023_lab1_163089$ git branch
+  bug1
+  bug2
+  bug3
+* master
+
